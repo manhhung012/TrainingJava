@@ -73,3 +73,10 @@ Temporary Items
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
+
+.idea/.gitignore
+.idea/libraries/mysql_connector_java_8_0_28.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
