@@ -11,6 +11,8 @@ public abstract class Person {
         System.out.println(sex);
     }
 
+    abstract void run();
+
     public String getName() {
         return name;
     }

@@ -10,6 +10,8 @@ public class ListCollections {
         list.add("chuoi 1");
         list.add("chuoi 2");
         list.add("chuoi 3");
+        System.out.println(list.indexOf("chuoi 1"));
+
 
 
         List<String> listLinked = new LinkedList<>();

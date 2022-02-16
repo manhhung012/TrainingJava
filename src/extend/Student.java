@@ -5,6 +5,17 @@ public class Student extends Person implements Action {
     public void study() {
         System.out.println("Go to School");
     }
+
+    @Override
+    public void eat() {
+        System.out.println("Eat");
+    }
+
+
+    @Override
+    void run() {
+        System.out.println("Run");
+    }
 }
 
 class Demo {
@@ -15,5 +26,7 @@ class Demo {
         st.setAge(23);
         st.showInfo();
         st.study();
+        st.eat();
+        st.run();
     }
 }
