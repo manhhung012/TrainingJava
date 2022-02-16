@@ -1,4 +1,4 @@
-package Generic;
+package generic;
 
 public class GenericClass<K, V> {
     private K key;

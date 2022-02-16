@@ -1,4 +1,4 @@
-package JDBC;
+package jdbc;
 
 public class User {
     private int Id;

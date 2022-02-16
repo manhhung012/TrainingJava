@@ -15,6 +15,8 @@ public class StringHandling {
         System.out.println(str.contentEquals("PhamManhHung"));
         System.out.println(str.contentEquals("PhamManh"));
 
+
+
         
     }
 }

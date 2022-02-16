@@ -1,4 +1,4 @@
-package Generic;
+package generic;
 
 public interface GenericInterface<T> {
     void add(T String);

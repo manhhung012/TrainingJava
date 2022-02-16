@@ -80,13 +80,4 @@ public class SanPham {
                 ", giamGia=" + giamGia +
                 '}';
     }
-
-    public static void main(String[] args) {
-        SanPham.nhap(); //nhap sp1
-        SanPham.nhap(); //nhap sp2
-        SanPham sp = new SanPham("sp3", 10000); //nhap sp3 (khong co giam gia)
-        SanPham.xuat(); //Xuat danh sach sp
-    }
-
-
 }
