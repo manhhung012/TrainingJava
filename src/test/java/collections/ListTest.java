@@ -1,21 +1,18 @@
 package collections;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
-@RunWith(JUnit4.class)
-public class ArrayListTest {
+
+public class ListTest {
     private static List<String> list = new ArrayList<>();
 
     @BeforeClass
-    public static void setUp(){
+    public static void setUp() {
         list.add("String 1");
         list.add("String 2");
         list.add("String 3");
@@ -29,10 +26,15 @@ public class ArrayListTest {
 
     @Test
     public void testGet() {
-        assertEquals("String 1",list.get(0));
-        assertEquals("String 2",list.get(1));
-        assertEquals("String 3",list.get(2));
+        assertEquals("String 1", list.get(0));
+        assertEquals("String 2", list.get(1));
+        assertEquals("String 3", list.get(2));
 
+    }
+
+    @Test
+    public void testSize() {
+        assertEquals(3, list.size());
     }
 
     @Test
@@ -81,7 +83,7 @@ public class ArrayListTest {
     public void testToArray() {
         String[] arrayTemp = {"String 1", "String 2", "String 3"};
 
-        String[] array = list.toArray(new String[list.size()]);
+        String[] array = list.toArray(new String[0]);
         assertEquals(arrayTemp.length, array.length);
         for (int i = 0; i < array.length; i++) {
             assertEquals("" + i, arrayTemp[i], array[i]);
@@ -98,8 +100,17 @@ public class ArrayListTest {
 
     @Test
     public void testContains() {
-
         assertTrue(list.contains("String 1"));
+    }
+
+    @Test
+    public void testContainsAll() {
+        List<String> listTemp = new ArrayList<>();
+        listTemp.add("String 1");
+        listTemp.add("String 2");
+        listTemp.add("String 3");
+
+        assertTrue(list.containsAll(listTemp));
     }
 
 
