@@ -1,4 +1,4 @@
-package OPPs;
+package opps;
 
 public class SanPhamKM extends SanPham {
     private double mucKm;
