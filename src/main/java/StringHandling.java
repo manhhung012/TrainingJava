@@ -1,5 +1,5 @@
 public class StringHandling {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String str = new String("PhamManhHung");
 
         System.out.println(str.charAt(5));
@@ -28,20 +28,20 @@ public class StringHandling {
         System.out.println("".isEmpty());
 
         System.out.println(str.length());
-        System.out.println(str.replace('a','u'));
+        System.out.println(str.replace('a', 'u'));
 
         System.out.println(str.startsWith("Pham"));
         System.out.println(str.startsWith("ham"));
 
         System.out.println(str.substring(4));
-        System.out.println(str.substring(4,5));
+        System.out.println(str.substring(4, 5));
 
         System.out.println("   Hung   ".trim());
 
         System.out.println(str.toLowerCase());
         System.out.println(str.toUpperCase());
 
-        System.out.println(String.valueOf(123.3)+"0000");
+        System.out.println(String.valueOf(123.3) + "0000");
 
 
     }
