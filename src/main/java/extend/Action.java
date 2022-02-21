@@ -1,7 +1,9 @@
 package extend;
 
 public interface Action {
-    void study();
+    String study(int brain, int mana, int hp, boolean getUp);
 
     void eat();
+
+    String run();
 }
