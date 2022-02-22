@@ -1,5 +1,3 @@
-// Java program to implement interpolation search 
-
 class Test {
     // Array of items on which search will 
     // be conducted. 

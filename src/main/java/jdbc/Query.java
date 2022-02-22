@@ -80,11 +80,4 @@ public class Query {
         }
         return bl;
     }
-
-    public static void main(String[] args) {
-        System.out.println(Query.getAllUser());
-        System.out.println(Query.getUserById(1));
-        User u = new User(19, "Phong", "87896s");
-        System.out.println(Query.addUser(u));
-    }
 }

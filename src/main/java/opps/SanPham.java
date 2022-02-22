@@ -2,29 +2,27 @@ package opps;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class SanPham {
     private String tenSp;
-    private double donGia;
-    private double giamGia;
+    private Double donGia;
+    private Double giamGia;
 
     public static List<SanPham> listSp = new ArrayList<>();
-    public static Scanner scan = new Scanner(System.in);
 
     public SanPham() {
     }
 
-    public SanPham(String tenSp, double donGia, double giamGia) {
+    public SanPham(String tenSp, Double donGia,  Double giamGia) {
         this.tenSp = tenSp;
         this.donGia = donGia;
         this.giamGia = giamGia;
     }
 
-    public SanPham(String tenSp, double donGia) {
+    public SanPham(String tenSp,  Double donGia) {
         this.tenSp = tenSp;
         this.donGia = donGia;
-        this.giamGia = 0;
+        this.giamGia = 0.0;
     }
 
     public String getTenSp() {
@@ -35,42 +33,53 @@ public class SanPham {
         this.tenSp = tenSp;
     }
 
-    public double getDonGia() {
+    public Double getDonGia() {
         return donGia;
     }
 
-    public void setDonGia(double donGia) {
+    public void setDonGia(Double donGia) {
         this.donGia = donGia;
     }
 
-    public double getGiamGia() {
+    public Double getGiamGia() {
         return giamGia;
     }
 
-    public void setGiamGia(double giamGia) {
+    public void setGiamGia(Double giamGia) {
         this.giamGia = giamGia;
     }
 
-    public static void nhap() {
-        SanPham sp = new SanPham();
-        System.out.print("Ten san pham: ");
-        sp.setTenSp(scan.next());
-        System.out.print("Nhap don gia: ");
-        sp.setDonGia(new Double(scan.next()));
-        System.out.print("Nhap giam gia: ");
-        sp.setGiamGia(new Double(scan.next()));
+    public static String nhap(String ten, Double gia, Double giam) {
+        boolean check = false;
+        String status = "";
+        for(int i = 0; i<SanPham.listSp.size(); i++){
+            if(SanPham.listSp.get(i).getTenSp()==ten){
+                SanPham.listSp.get(i).setTenSp(ten);
+                SanPham.listSp.get(i).setDonGia(gia);
+                SanPham.listSp.get(i).setGiamGia(giam);
+                check = true;
+                status = "Update Successfully";
+            }
+        }
+        if(!check){
+            SanPham sp = new SanPham();
+            sp.setTenSp(ten);
+            sp.setDonGia(gia);
+            sp.setGiamGia(giam);
 
-        listSp.add(sp);
+            listSp.add(sp);
+            status = "Insert Successfully";
+        }
+
+        return status;
     }
 
-    public static void xuat() {
-        System.out.print(listSp);
-    }
 
-
-    private double getThueNhapKhau() {
+    public Double getThueNhapKhau() {
         return donGia * 1.1;
     }
+
+
 
     @Override
     public String toString() {
